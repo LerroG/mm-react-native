@@ -41,7 +41,7 @@ const Auth: FC = () => {
 							<Text className='text-black text-center text-base mt-6'>
 								{isReg ? 'Already have an account?' : "Don't have an account?"}
 								<Text className='text-[#47AA52]'>
-									{isReg ? 'Login' : 'Sign Up'}
+									{isReg ? ' Login' : ' Sign Up'}
 								</Text>
 							</Text>
 						</Pressable>
