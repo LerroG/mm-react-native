@@ -8,17 +8,20 @@ import Button from '@/components/ui/button/Button'
 import { IAuthFormData } from '@/types/auth.types'
 
 import AuthFields from './AuthFields'
+import { useAuthMutations } from './useAuthMutations'
 
 const Auth: FC = () => {
 	const [isReg, setIsReg] = useState(false)
-	const isLoading = false
 
 	const { handleSubmit, reset, control } = useForm<IAuthFormData>({
 		mode: 'onChange'
 	})
 
+	const { isLoading, registerSync, loginSync } = useAuthMutations(reset)
+
 	const onSubmit: SubmitHandler<IAuthFormData> = data => {
-		console.log(data)
+		if (isReg) registerSync(data)
+		else loginSync(data)
 	}
 
 	return (
