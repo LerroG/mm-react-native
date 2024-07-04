@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import { EnumAsyncStorage, IAuthResponse } from '@/types/auth.types'
 
-import { API_URL, getAuthUrl } from '@/config/api.config'
+import { getAuthUrl } from '@/config/api.config'
 
 import { request } from '../api/request.api'
 
