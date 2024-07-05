@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Image, Pressable, Text, View } from 'react-native'
+import { Image, Pressable, View } from 'react-native'
 
 import { useTypedNavigation } from '@/hooks/useTypedNavigation'
 

@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { Text, View } from 'react-native'
 
 import Layout from '@/components/layout/Layout'
 import Loader from '@/components/ui/Loader'
