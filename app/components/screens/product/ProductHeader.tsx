@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 
 import { useTypedNavigation } from '@/hooks/useTypedNavigation'
 
+import FavoriteButton from './FavoriteButton'
 import ProductButton from './ProductButton'
 import { IProductComponent } from './product-page.types'
 
@@ -18,7 +19,7 @@ const ProductHeader: FC<IProductComponent> = ({ product }) => {
 					iconSize={26}
 					color='#555'
 				/>
-				<Text>Favorite button</Text>
+				<FavoriteButton productId={product.id} />
 			</View>
 		</View>
 	)

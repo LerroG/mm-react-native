@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, View } from 'react-native'
 
 import Layout from '@/components/layout/Layout'
 import Loader from '@/components/ui/Loader'
@@ -7,8 +7,8 @@ import Loader from '@/components/ui/Loader'
 import { getMediaSource } from '@/utils/getMediaSource'
 
 import ProductHeader from './ProductHeader'
-import AddToCartButton from './product-info/AddToCartButton'
-import ProductInfo from './product-info/ProductInfo'
+import AddToCartButton from './product-detail/AddToCartButton'
+import ProductDetail from './product-detail/ProductDetail'
 import { useProduct } from './useProduct'
 
 const Product: FC = () => {
@@ -27,8 +27,8 @@ const Product: FC = () => {
 					height={260}
 				/>
 			</View>
-			<ProductInfo product={product} />
 			<AddToCartButton productId={product.id} />
+			<ProductDetail product={product} />
 		</Layout>
 	)
 }
