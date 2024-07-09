@@ -23,7 +23,7 @@ const AddToCartButton: FC<IAddToCartButton> = ({ product }) => {
 		<Button
 			onPress={() =>
 				currentElement
-					? removeFromCart({ id: product.id })
+					? removeFromCart({ id: currentElement.id })
 					: addToCart({ product, quantity: 1, price: product.price })
 			}
 			className='mt-6'
