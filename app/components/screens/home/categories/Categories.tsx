@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Image, Pressable, Text, View } from 'react-native'
+import { Image, Pressable, ScrollView, Text, View } from 'react-native'
 
 import Heading from '@/components/ui/Heading'
 import Loader from '@/components/ui/Loader'
@@ -21,24 +21,28 @@ const Categories: FC = () => {
 		<View className='flex flex-col mt-5 mb-4'>
 			<Heading>Categories</Heading>
 
-			<View className='flex-row justify-center mt-5'>
+			<ScrollView
+				horizontal={true}
+				showsHorizontalScrollIndicator={false}
+				className='flex-row mt-5'
+			>
 				{categories?.map(category => (
 					<Pressable
 						onPress={() => navigate('Category', { slug: category.slug })}
 						key={category.id}
-						className='rounded-xl bg-gray-100 p-5 mx-2'
+						className='rounded-xl w-24 bg-gray-100 py-5 px-3 mx-2'
 					>
 						<Image
 							source={getMediaSource(category.image)}
-							className='w-10 h-8 mb-2 p-3'
-							style={{ resizeMode: 'cover' }}
+							className='h-10 mb-2'
+							style={{ resizeMode: 'contain' }}
 						/>
 						<Text className='font-normal text-xs text-center'>
 							{category.name}
 						</Text>
 					</Pressable>
 				))}
-			</View>
+			</ScrollView>
 		</View>
 	)
 }
